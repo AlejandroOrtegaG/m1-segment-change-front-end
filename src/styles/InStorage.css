@@ -1,0 +1,40 @@
+.storage {
+  margin: auto 0;
+  height: fit-content;
+  border-right: 3px solid black;
+  padding: 0 25px;
+  justify-content: center;
+}
+
+.storage-segments {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.storage-segments .hex {
+  height: 100px;
+  margin: 0;
+}
+
+.storage-segments .inner-hex {
+  height: 94px;
+  margin: 0;
+}
+
+.title {
+  margin-top: 0;
+  text-align: center;
+}
+
+@media (max-height: 850px) {
+  .storage-segments .hex{
+    height: 70px;
+    width: 70px;
+  }
+
+  .storage-segments .inner-hex{
+    height: 66px;
+    width: 66px;
+  }
+}

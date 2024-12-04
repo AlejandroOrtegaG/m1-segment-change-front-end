@@ -1,0 +1,243 @@
+:root {
+  --height: 130px;
+  --inner-height: 124px;
+  --margin-custom-hex: calc(var(--height) / 2 + 4px);
+}
+
+@media (max-height: 920px) {
+  :root {
+    --height: 120px;
+    --inner-height: 114px;
+  }
+  .type-name h1 {
+    font-size: 20px !important;
+  }
+  .type-name h2 {
+    font-size: 9px !important;
+  }
+  .inner-hex .name h2 {
+    font-size: 12px !important;
+  }
+  .positioners,
+  .positioners-below {
+    font-size: 9px !important;
+  }
+  .gauge {
+    font-size: 8px !important;
+  }
+  .acpChannel {
+    font-size: 6px !important;
+  }
+  .border-sensor {
+    font-size: 10px !important;
+  }
+}
+
+@media (max-height: 850px) {
+  :root {
+    --height: 110px;
+    --inner-height: 104px;
+  }
+  .type-name h1 {
+    font-size: 21px !important;
+  }
+  .type-name h2 {
+    font-size: 10px;
+  }
+  .inner-hex .name h2 {
+    font-size: 13px;
+  }
+  .positioners,
+  .positioners-below {
+    font-size: 10px;
+  }
+  .gauge {
+    font-size: 8px;
+  }
+  .acpChannel {
+    font-size: 7px;
+  }
+}
+
+@media (max-height: 770px) {
+  :root {
+    --height: 100px;
+    --inner-height: 94px;
+  }
+
+  .type-name h1 {
+    font-size: 15px !important;
+  }
+  .type-name h2 {
+    font-size: 8px !important;
+  }
+  .acpChannel{
+    font-size: 8px !important;
+  }
+}
+
+.hex,
+.inner-hex {
+  aspect-ratio: 1/1;
+  clip-path: polygon(
+    100% 50%,
+    75% 93.3%,
+    25% 93.3%,
+    0% 50%,
+    25% 6.7%,
+    75% 6.7%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}
+
+.hex {
+  height: var(--height);
+  background-color: black;
+  margin-right: var(--margin-custom-hex);
+  position: relative;
+}
+
+.hex:hover {
+  background-color: rgb(87, 171, 226);
+  cursor: pointer;
+}
+
+.inner-hex {
+  height: var(--inner-height);
+  background-color: white;
+  flex-direction: column;
+  position: relative;
+}
+
+.inner-hex * {
+  margin: 0;
+}
+
+.type-name {
+  display: flex;
+  font-weight: 400;
+  height: fit-content;
+}
+
+.type-name h1 {
+  font-size: 25px;
+}
+
+.type-name h2 {
+  font-size: 12px;
+}
+
+.inner-hex .name h2 {
+  font-weight: 300;
+  font-size: 15px;
+  font-weight: bolder;
+}
+
+.positioners,
+.positioners-below {
+  font-size: 12px;
+}
+
+.positioners {
+  width: 35%;
+}
+
+.positioners .positioners-above {
+  display: flex;
+  justify-content: space-between;
+}
+
+.positioners .positioners-below {
+  display: flex;
+  justify-content: center;
+}
+
+.positioners-below {
+  margin-top: 0;
+}
+
+.positioner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.positioner.orange,
+.positioner.orange .gauge {
+  color: orange;
+}
+
+.gauge {
+  font-size: 10px;
+  margin-bottom: -25%;
+}
+
+.border-sensors {
+  position: absolute;
+  width: 100%;
+  height: 90%;
+  display: flex;
+}
+
+.border-sensor {
+  width: fit-content;
+  height: fit-content;
+  padding: 0px 1px;
+  border-radius: 3px;
+  font-size: 12px;
+  display: flex;
+}
+
+.border-sensor.disabled {
+  background-color: red;
+}
+
+.acpChannel {
+  margin-top: 12%;
+  font-size: 9px;
+}
+
+.border-sensor.top {
+  position: absolute;
+  top: 0;
+  left: 35%;
+  transform: translateX(-50%) rotate(0deg);
+}
+
+.border-sensor.top-right {
+  position: absolute;
+  top: 17%;
+  right: 10%;
+  transform: translateY(-50%) rotate(60deg);
+}
+
+.border-sensor.bottom-right {
+  position: absolute;
+  bottom: 38%;
+  right: 0;
+  transform: translateY(50%) rotate(120deg);
+}
+
+.border-sensor.bottom {
+  position: absolute;
+  bottom: 0;
+  right: 25%;
+}
+
+.border-sensor.bottom-left {
+  position: absolute;
+  bottom: 16%;
+  left: 10%;
+  transform: translateY(50%) rotate(240deg);
+}
+
+.border-sensor.top-left {
+  position: absolute;
+  top: 35%;
+  left: 0;
+  transform: translateY(-50%) rotate(300deg);
+}
