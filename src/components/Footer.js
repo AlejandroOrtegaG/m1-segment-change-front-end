@@ -31,9 +31,9 @@ const Footer = ({ checkedItems, onCheckedItemsChange }) => {
 
   const links = [
     { path: "/App", label: "Vista principal" },
-    { path: "/App", label: "Vista adicional" },
-    { path: "/App", label: "Vista alternativa" },
-    { path: "/App", label: "Vista complementaria" },
+    { path: "/App", label: "Vista de datos" },
+    { path: "/App", label: "Vista de almacén" },
+    { path: "/App", label: "Precambio de segmentos" },
   ];
 
   const handleLinkClick = (index) => {
