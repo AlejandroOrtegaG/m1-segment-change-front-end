@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import MainView from "./views/MainView";
+import DetailedView from "./views/DetailedView";
 import "./styles/App.css";
 import Header from "./components/Header";
 
@@ -9,17 +10,24 @@ function App() {
 
   const handleCheckedItemsChange = (updatedCheckedItems) => {
     setCheckedItems(updatedCheckedItems);
-    console.log(updatedCheckedItems);
   };
 
   return (
     <Router>
+      <Header />
       <div className="app">
-        <Header />
-        <MainView 
-          selectedSegments={checkedItems} 
-          onCheckedItemsChange={handleCheckedItemsChange} 
-        />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <MainView
+                selectedSegments={checkedItems}
+                onCheckedItemsChange={handleCheckedItemsChange}
+              />
+            }
+          />
+          <Route path="/detailed-view" element={<DetailedView />} />
+        </Routes>
       </div>
     </Router>
   );

@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import "../styles/MainView.css";
-import HexGrid from "../components/HexGrid";
 import Storage from "../components/InStorage";
 import Footer from "../components/Footer";
+import M1Hexgrid from "../components/M1HexGrid";
 
-const MainView = ({ selectedSegments, onCheckedItemsChange }) => {
+const MainView = ({ selectedItems, onCheckedItemsChange }) => {
   const [checkedItems, setCheckedItems] = useState(new Array(11).fill(true));
 
   const handleCheckedItemsChange = (updatedCheckedItems) => {
@@ -14,13 +14,15 @@ const MainView = ({ selectedSegments, onCheckedItemsChange }) => {
     }
   };
 
+
+
   return (
     <div className="main-view-grid">
       <div className="storage-area">
-        <Storage selectedSegments={selectedSegments} />
+        <Storage selectedSegments />
       </div>
       <div className="hexgrid-area">
-        <HexGrid selectedSegments={selectedSegments} />
+        <M1Hexgrid selectedItems={checkedItems} />
       </div>
       <Footer checkedItems={checkedItems} onCheckedItemsChange={handleCheckedItemsChange} />
     </div>

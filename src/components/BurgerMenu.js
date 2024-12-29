@@ -4,7 +4,7 @@ import "../styles/BurgerMenu.css";
 const menuItems = [
   "Nombre del segmento",
   "Número de segmento",
-  "Sensores de borde",
+  "Sensores de borde",  
   "Posicionadores",
   "Sensores deshabilitados",
 ];
@@ -15,6 +15,7 @@ const BurgerMenu = ({ menuOpen, checkedItems, onCheckedItemsChange }) => {
     updatedCheckedItems[index] = !updatedCheckedItems[index];
     onCheckedItemsChange(updatedCheckedItems);
   };
+  
 
   return (
     <div>
