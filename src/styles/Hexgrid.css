@@ -1,42 +1,149 @@
-:root {
-  --height: 130px;
-  --inner-height: 124px;
-  --margin-custom-grid: calc(var(--height) / 3);
-  --margin-custom-row: calc(var(--height) / 4 + 4px);
-}
-
-.hexgrid-container {
-  height: 90%;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .hexgrid {
+  height: fit-content !important;
+  overflow: visible !important;
+}
+.hexgrid g {
+  fill: transparent;
+}
+.hexgrid g polygon:hover {
+  stroke: blue;
+  cursor: pointer;
+}
+
+.hexgrid g polygon {
+  stroke: black;
+  stroke-width: 0.3;
+}
+
+.hexgrid g text {
+  font-size: 0.22em;
+  fill: black;
+  pointer-events: none;
+}
+
+.hexgrid g .mainview-segment-number {
+  font-size: 0.25em;
+  font-weight: 900;
+}
+
+.hexgrid g .mainview-segment-category {
+  font-size: 0.13em;
+  font-weight: 900;
+}
+
+.hexgrid g .mainview-segment-edge-sensor {
+  font-size: 0.135em;
+}
+
+.hexgrid g .mainview-segment-edge-sensor-channel {
+  font-size: 0.105em;
+}
+
+.hexgrid g .mainview-segment-positioners {
+  font-size: 0.16em;
+}
+
+.hexgrid g .mainview-segment-name {
+  font-size: 0.13em;
+}
+
+.hexgrid g .prechange-segment-number {
+  font-size: 0.25em;
+  font-weight: 900;
+}
+
+.hexgrid g .prechange-segment-category {
+  font-size: 0.13em;
+  font-weight: 900;
+}
+
+.hexgrid g .prechange-segment-name {
+  font-size: 0.13em;
+}
+
+.hexgrid g .prechange-segment-date {
+  font-size: 0.12em;
+  fill: red;
+  font-weight: 700;
+}
+
+.hexgrid .prechange-segment0 polygon {
+  stroke: rgb(255, 165, 0);
+  stroke-width: 0.3;
+  fill: rgb(255, 165, 0, 0.15);
+}
+.hexgrid .prechange-segment1 polygon {
+  stroke: rgb(255, 0, 255);
+  stroke-width: 0.3;
+  fill: rgb(255, 0, 255, 0.15);
+}
+
+.hexgrid .prechange-segment polygon {
+  pointer-events: none;
+}
+
+.custom-modal {
+  width: 30%;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  background: white;
   display: flex;
   flex-direction: column;
-  align-items: center;
-}
-
-.hex-row {
-  display: flex;
-  margin: calc(var(--margin-custom-row) * -1) 0
-    calc(var(--margin-custom-row) * -1) 0;
-}
-
-.center {
-  margin: auto;
-  display: flex;
-  flex-direction: row;
-  margin: calc(var(--margin-custom-row) * -1) 0
-    calc(var(--margin-custom-row) * -1) 0;
-  align-items: center;
-  width: 72.6%;
   justify-content: space-between;
 }
 
-.hex-row .hex:last-child,
-.center .hex:last-child {
-  margin-right: 0;
+.custom-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.prechange-modal-header{
+  display: flex;
+  justify-content: space-between;
+}
+.prechange-modal-header h2{
+  margin: 0;
+}
+
+.prechange-modal-header button {
+  background-color: transparent;
+  width: fit-content;
+  height: fit-content;
+  border: none;
+  cursor: pointer;
+}
+
+.prechange-modal-header button svg{
+  width: 20px;
+  aspect-ratio: 1/1;
+}
+
+.prechange-modal-actions {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.prechange-modal-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 80%;
+  margin-bottom: 10%;
+}
+
+.prechange-modal-actions button {
+  cursor: pointer;
 }

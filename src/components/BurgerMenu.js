@@ -4,12 +4,16 @@ import "../styles/BurgerMenu.css";
 const menuItems = [
   "Nombre del segmento",
   "Número de segmento",
-  "Sensores de borde",
+  "Identificador MCM",
+  "Sensores de borde",  
   "Posicionadores",
+  "Galgas",
+  "ACP en uso",
   "Sensores deshabilitados",
+  "Fecha de cambio",
 ];
 
-const BurgerMenu = ({ menuOpen, checkedItems, onCheckedItemsChange }) => {
+const BurgerMenu = ({ menuOpen, checkedItems, onCheckedItemsChange, neededItems }) => {
   const handleItemClick = (index) => {
     const updatedCheckedItems = [...checkedItems];
     updatedCheckedItems[index] = !updatedCheckedItems[index];
@@ -22,17 +26,19 @@ const BurgerMenu = ({ menuOpen, checkedItems, onCheckedItemsChange }) => {
         <div className="menu" onClick={(e) => e.stopPropagation()}>
           <ul className="hide-elements-menu">
             {menuItems.map((item, index) => (
-              <li key={index} className="menu-item" onClick={() => handleItemClick(index)}>
-                <button className="menu-button">
-                  <input
-                    type="checkbox"
-                    checked={checkedItems[index]}
-                    className="custom-checkbox"
-                    onChange={() => handleItemClick(index)}
-                  />
-                  <span>{item}</span>
-                </button>
-              </li>
+              neededItems[index] && (
+                <li key={index} className="menu-item" onClick={() => handleItemClick(index)}>
+                  <button className="menu-button">
+                    <input
+                      type="checkbox"
+                      checked={checkedItems[index]}
+                      className="custom-checkbox"
+                      onChange={() => handleItemClick(index)}
+                    />
+                    <span>{item}</span>
+                  </button>
+                </li>
+              )
             ))}
           </ul>
         </div>

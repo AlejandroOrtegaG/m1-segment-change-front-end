@@ -1,0 +1,74 @@
+.segment-actions-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40%;
+}
+.actions-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 80%;
+  width: 50%;
+}
+
+.action-button-type-1 {
+  background-color: #62bfa5;
+  border: none;
+}
+
+.action-button-type-2 {
+  background-color: #58a0b0;
+  border: none;
+}
+
+.action-button-type-1,
+.action-button-type-2 {
+  font-size: 0.9em;
+  padding: 10px;
+  border-radius: 10px;
+  min-width: 50px;
+  flex: 1;
+  text-align: center;
+}
+
+.actions h2 {
+  margin-bottom: 12px;
+  margin-top: 20px;
+}
+
+.action-buttons-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-start;
+}
+
+.final-actions-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.final-actions-wrapper button {
+  background-color: transparent;
+  padding: 10px;
+  font-size: 0.9em;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.final-action-button-type-1 {
+  border: 2px solid #58a0b0;
+  color: #58a0b0;
+  cursor: pointer;
+}
+
+.final-action-button-type-2 {
+  border: 2px solid #62bfa5;
+  color: #62bfa5;
+}
+
+.edge-sensor-recovery {
+  color: #58a0b0;
+  text-decoration: underline;
+}

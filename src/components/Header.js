@@ -1,9 +1,30 @@
 import React, { useState, useRef, useEffect } from "react";
 import "../styles/Header.css";
+import { useNavigate, useLocation } from "react-router-dom"; // Import useLocation
+
+export const BackButton = () => {
+  let navigate = useNavigate();
+  return (
+    <>
+      <button className="back-button" onClick={() => navigate(-1)}>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+        >
+          <path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z" />
+        </svg>
+        Volver
+      </button>
+    </>
+  );
+};
 
 const Header = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
+  const location = useLocation(); // Use useLocation to get the current path
 
   const toggleDropdown = () => {
     setDropdownOpen((prev) => !prev);
@@ -32,6 +53,10 @@ const Header = () => {
 
   return (
     <div className="header-user">
+      {(location.pathname === "/detailed-view" ||
+        location.pathname === "/prechange-form" ||
+        location.pathname === "/detailed-view-history" ||
+        location.pathname === "/element-data") && <BackButton />}
       <div className="user-dropdown" onClick={toggleDropdown}>
         <div className="user">
           <svg

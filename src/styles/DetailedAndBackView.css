@@ -1,0 +1,108 @@
+.hexgrid-detailed g polygon {
+  stroke-width: 0.2;
+  pointer-events: none;
+}
+.hexgrid-detailed g text {
+  font-size: 0.22em;
+  fill: black;
+}
+
+.hexgrid-detailed {
+  box-shadow: 0 0 5px 3px rgb(158, 158, 158) !important;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  border-radius: 0px 15px 15px 15px;
+}
+
+.css-19kzrtu {
+  padding: 0px !important;
+}
+
+.css-1gsv261 {
+  border-bottom: none !important;
+}
+
+.css-1usuzwp-MuiButtonBase-root-MuiTab-root {
+  border-top: 3px solid rgba(0, 0, 0, 0.5) !important;
+  background-color: rgba(201, 201, 201, 1) !important;
+}
+
+.detailed-view {
+  border-radius: 10px 0px 0px 0px !important;
+}
+
+.back-view {
+  border-radius: 0px 10px 0px 0px !important;
+}
+
+.css-1usuzwp-MuiButtonBase-root-MuiTab-root.Mui-selected {
+  background-color: white !important;
+  color: black !important;
+  font-weight: 550 !important;
+}
+.css-8atqhb {
+  width: fit-content !important;
+  padding: 10px;
+  margin: 0 25px !important;
+}
+.css-1wxkzlj-MuiTabs-flexContainer {
+  width: fit-content !important;
+  border-radius: 0 10px !important;
+  box-shadow: 0px -1px 4px 2px rgba(0, 0, 0, 0.3);
+}
+
+.css-1usuzwp-MuiButtonBase-root-MuiTab-root {
+  border-left-width: 5px;
+}
+.css-s2t35c-MuiTabs-scroller {
+  overflow-x: visible !important;
+}
+
+.hexgrid-detailed g .detailedview-segment-name {
+  font-size: 0.15em;
+  font-weight: 600;
+  fill: #e6a313;
+}
+
+.hexgrid-detailed g .detailedview-segment-category {
+  font-size: 0.13em;
+  font-weight: 750;
+  fill: red;
+}
+
+.hexgrid-detailed g .detailedview-segment-number {
+  font-weight: 1000;
+  font-size: 0.3em;
+}
+
+.hexgrid-detailed g .detailedview-segment-edge-sensor {
+  font-size: 0.18em;
+}
+
+.hexgrid-detailed g .detailedview-segment-edge-sensor-mcm-channel {
+  fill: red;
+  font-size: 0.11em;
+}
+
+.hexgrid-detailed g .detailedview-segment-edge-sensor-mcm {
+  fill: #72558f;
+  font-size: 0.12em;
+}
+
+.hexgrid-detailed g .detailedview-segment-positioner-gauges {
+  font-size: 0.16em;
+}
+
+.hexgrid-detailed g .detailedview-segment-positioner-gauges.positive {
+  fill: #ff7223;
+}
+.hexgrid-detailed g .detailedview-segment-positioner-gauges.negative {
+  fill: #1375e6;
+}
+.hexgrid-detailed g .detailedview-segment-acp {
+  fill: #59afff;
+  font-size: 0.16em;
+  font-weight: 750;
+}
+
+

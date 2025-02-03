@@ -1,0 +1,46 @@
+.prechange-form-submit {
+  height: 100%;
+  padding: 0 4rem;
+}
+.prechange-form {
+  display: flex;
+  height: 80%;
+  width: 70%;
+  justify-content: space-between;
+}
+
+.prechange-form-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 40%;
+}
+
+.prechange-form-input {
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 10%;
+}
+.prechange-form-input input,
+.prechange-form-input select {
+  border: 2px solid rgb(0, 0, 0, 0.4);
+  background-color: transparent;
+  border-radius: 10px;
+  font-size: 20px;
+  padding: 5px;
+}
+
+.prechange-form-submit-action {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.prechange-form-submit-action button {
+  background-color: #62bfa5;
+  border: none;
+  padding: 15px;
+  font-size: 18px;
+  border-radius: 10px;
+}

@@ -2,14 +2,22 @@
 
 body {
   margin: 0;
-  font-family: "Inter", sans-serif; /* Sets the default font for the entire body */
+  font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+html, body, app-root, #root, .app { 
+  height: 90vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }

@@ -1,0 +1,40 @@
+{ 
+    "id": "SegmentChange1", 
+    "type": "SegmentChange", 
+    "startDate": "2024-12-07 07:00:00",
+    "endDate": "2024-12-09 15:00:00",
+    "proposal": [ 
+        { 
+            "startDate": "2024-12-07 10:00:00",
+            "endDate": "2024-12-07 17:00:00",
+            "done": 1,
+            "participants": {
+                "electronicts": ["Zaida"], 
+                "mechanicals": ["Josué"], 
+                "grua": ["Alejandro"], 
+                "leader": "Zaida" 
+            },
+            "refSegments": {
+                "type": "Relationship",
+                "value": ["M1Segment10", "M1Segment11"]
+            },
+            "wiffleTree": 1
+        },
+        { 
+            "startDate": "2024-12-08 07:00:00",
+            "endDate": "2024-12-08 17:00:00",
+            "done": 0,
+            "participants": {
+                "electronicts": ["Zaida", "Josué"], 
+                "mechanicals": ["Alejandro"], 
+                "grua": ["Raúl"], 
+                "leader": "Zaida" 
+            },
+            "refSegments": {
+                "type": "Relationship",
+                "value": ["M1Segment12", "M1Segment15"]
+            },
+            "wiffleTree": 0
+        }
+    ]
+}

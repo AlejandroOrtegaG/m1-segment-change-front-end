@@ -1,9 +1,6 @@
-.storage {
-  margin: auto 0;
-  height: fit-content;
-  border-right: 3px solid black;
+.storage-card {
   padding: 0 25px;
-  justify-content: center;
+  box-shadow: 0 0 5px 3px #9e9e9e !important; 
 }
 
 .storage-segments {
@@ -12,29 +9,19 @@
   flex-direction: column;
 }
 
-.storage-segments .hex {
-  height: 100px;
-  margin: 0;
-}
-
-.storage-segments .inner-hex {
-  height: 94px;
-  margin: 0;
-}
-
 .title {
-  margin-top: 0;
   text-align: center;
 }
 
-@media (max-height: 850px) {
-  .storage-segments .hex{
-    height: 70px;
-    width: 70px;
-  }
+svg g {
+  fill: transparent;
+}
+svg g polygon:hover {
+  stroke: blue;
+  cursor: pointer;
+}
 
-  .storage-segments .inner-hex{
-    height: 66px;
-    width: 66px;
-  }
+svg g polygon {
+  stroke: black;
+  stroke-width: 0.3;
 }

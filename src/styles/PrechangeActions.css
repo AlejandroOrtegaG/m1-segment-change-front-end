@@ -1,0 +1,58 @@
+.prechange-actions-wrapper {
+  margin: 0 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.prechange-actions-buttons {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.prechange-dates {
+  padding: 10px 20px;
+  margin: 10px 0;
+  border-radius: 10px;
+}
+
+.segment-view-data {
+  position: absolute;
+  left: 25px;
+  bottom: 75px;
+  color: #58a0b0;
+  text-decoration: underline;
+}
+
+.prechange-dates-0 {
+  border: 3px solid rgb(255, 165, 0);
+  background-color: rgb(255, 165, 0, 0.15);
+}
+
+.prechange-dates-1 {
+  border: 3px solid rgb(255, 0, 255);
+  background-color: rgb(255, 0, 255, 0.15);
+}
+
+.add-prechange-day, .send-prechange-reminder {
+  padding: 25px 35px;
+  border: none;
+  background-color: #58a0b0;
+  border-radius: 10px;
+}
+
+.add-prechange-day svg{
+  width: 20px;
+  aspect-ratio: 1/1;
+}
+
+.send-prechange-reminder {
+  font-size: 1em;
+}
+
+.add-prechange-day, .send-prechange-reminder {
+	cursor: pointer;
+}

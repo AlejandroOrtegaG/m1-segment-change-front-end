@@ -1,12 +1,13 @@
 import React, { useState, useRef, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import BurgerMenu from "./BurgerMenu";
 import "../styles/Footer.css";
 
-const Footer = ({ checkedItems, onCheckedItemsChange }) => {
-  const [selectedIndex, setSelectedIndex] = useState(0);
+const Footer = ({ checkedItems, neededItems, onCheckedItemsChange }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef(null);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -30,25 +31,26 @@ const Footer = ({ checkedItems, onCheckedItemsChange }) => {
   }, [menuOpen]);
 
   const links = [
-    { path: "/App", label: "Vista principal" },
-    { path: "/App", label: "Vista de datos" },
-    { path: "/App", label: "Vista de almacén" },
-    { path: "/App", label: "Precambio de segmentos" },
+    { path: "/", label: "Vista principal" },
+    { path: "/storage-view", label: "Vista de almacén" },
+    { path: "/segment-prechange", label: "Precambio de segmentos" },
   ];
 
-  const handleLinkClick = (index) => {
-    setSelectedIndex(index);
+  const handleLinkClick = (path) => {
     setMenuOpen(false);
+    navigate(path);
   };
 
   return (
     <footer className="footer">
       <nav className="footer-nav">
         <ul className="footer-nav-links">
-          {links.map((link, index) => (
-            <li key={index} onClick={() => handleLinkClick(index)}>
+          {links.map((link) => (
+            <li key={link.path} onClick={() => handleLinkClick(link.path)}>
               <Link
-                className={selectedIndex === index ? "link selected" : "link"}
+                className={
+                  location.pathname === link.path ? "link selected" : "link"
+                }
                 to={link.path}
               >
                 {link.label}
@@ -61,6 +63,7 @@ const Footer = ({ checkedItems, onCheckedItemsChange }) => {
             menuOpen={menuOpen}
             checkedItems={checkedItems}
             onCheckedItemsChange={onCheckedItemsChange}
+            neededItems={neededItems}
           />
         </div>
       </nav>

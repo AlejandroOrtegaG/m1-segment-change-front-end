@@ -1,0 +1,46 @@
+.storage-view-grid {
+  display: grid;
+  grid-template-columns: repeat(14, auto);
+  grid-template-rows: repeat(8, auto);
+  gap: 16px;
+  height: fit-content;
+}
+
+.storage-area {
+  grid-row: 4;
+  grid-column: 2 / span 2;
+}
+
+.storage-data-area {
+  grid-row: 1 / span 6;
+  grid-column: 6 / span 2;
+}
+
+.storage-hexgrid g polygon {
+  stroke: black;
+  stroke-width: 0.8;
+}
+
+.storage-hexgrid {
+  border: 2px solid black;
+}
+.storage-hex {
+  border: 2px solid red;
+  height: 100%;
+  padding: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.prueba {
+    font-size: 15px;
+    color: red;
+    width: 10px;
+    aspect-ratio: 1/1;
+}
+
+.storage-segment-data {
+    border: 1px solid black;
+    width: 100%;
+}

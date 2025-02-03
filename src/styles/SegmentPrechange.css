@@ -1,0 +1,6 @@
+.prechange-view-actions{
+    display: flex;
+    flex-direction: row;
+    padding: 0 0 0 200px;
+    justify-content: end;
+}
